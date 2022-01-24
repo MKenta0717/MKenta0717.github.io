@@ -1,0 +1,320 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd,
+dt{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2,
+p {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.wapper {
+  border: 1px solid pink;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.readMore {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.readMore a {
+  display: inline-block;
+  color: #88c3bd;
+  position: relative;
+}
+
+.readMore a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: skyblue;
+}
+
+#header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+header.fixed {
+  position: fixed;
+  background: rgba(151, 151, 151, 0.514);
+  z-index: 100;
+}
+
+header.fixed .cursol {
+  background: rgba(151, 151, 151, 0.514);
+}
+
+header .cursol {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 15px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+header .cursol .center_border {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .cursol.close .center_border {
+  background: transparent;
+}
+
+header .cursol .center_border::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  width: 35px;
+  height: 2px;
+  background: #000;
+  transition: transform 0.3s;
+}
+
+header .cursol.close .center_border::before {
+  transform: translateY(10px) rotate(-135deg);
+}
+
+header .cursol .center_border::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  width: 35px;
+  height: 2px;
+  background: #000;
+  transition: transform 0.3s;
+}
+
+header .cursol.close .center_border::after {
+  transform: translateY(-10px) rotate(135deg);
+}
+
+header section {
+  display: none;
+}
+
+header .mask {
+  width: 100%;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.863);
+}
+
+header .mask nav {
+  position: relative;
+  font-size: 2rem;
+  color: white;
+}
+
+header .mask p {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+header .mask nav ul {
+  border-top: 1px solid rgba(151, 151, 151, 0.514);
+}
+
+header .mask nav a {
+  display: block;
+  padding: 20px 0 20px 30px;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.514);
+}
+
+header .mask.hidden {
+  opacity: 0;
+  transform: translateY(-200%);
+}
+
+/* main */
+/* hero */
+
+main {
+  height: 100vh;
+}
+
+#hero {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#hero .pic {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: inherit;
+}
+
+#hero .pic img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+#hero .pic::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.349);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#hero #about {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hero #about p {
+  display: none;
+}
+
+/* menu */
+
+#menu {
+  margin-bottom: 80px;
+}
+#menu h2 {
+  margin-bottom: 10px;
+}
+
+#menu .pic {
+  margin: 20px 0 20px;
+}
+
+#menu .pic img {
+  width: 100%;
+}
+
+#menu dl {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#menu dt {
+  width: 70%;
+  border-top: 1px solid black;
+  padding: 10px 0;
+}
+
+#menu dt:last-of-type {
+  border-bottom: 1px solid black;
+}
+
+#menu dd {
+  width: 30%;
+  text-align: right;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+#menu dd:last-of-type {
+  border-bottom: 1px solid gray;
+}
+
+/* contact */
+
+#contact{
+  background-image: url(../img/footer_bg.jpg);
+  background-size: cover;
+  text-align: center; 
+  position: relative;
+}
+
+#contact::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.507);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#contact table {
+  width: 100%;
+  padding: 80px 0;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+#contact table th, .time, .address, .btn{
+  font-size: 1.5rem;
+}
+
+#contact table .tel {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+#contact table .address {
+  padding: 20px 0;
+  
+}
+
+#contact table .btn {
+  display: inline-block;
+  background: #88c3bd;
+  padding: 15px 110px;
+}
