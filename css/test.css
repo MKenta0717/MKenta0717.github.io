@@ -42,7 +42,6 @@ img {
 }
 
 .wapper {
-  border: 1px solid pink;
   width: 95%;
   margin: 0 auto;
 }
@@ -146,6 +145,7 @@ header .mask {
   top: 100px;
   left: 0;
   background: rgba(0, 0, 0, 0.863);
+  z-index: 100;
 }
 
 header .mask nav {
