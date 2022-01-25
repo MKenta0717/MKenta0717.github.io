@@ -5,6 +5,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 h1,
@@ -78,13 +79,11 @@ img {
 
 header.fixed {
   position: fixed;
-  background: rgba(151, 151, 151, 0.514);
+  background: white;
   z-index: 100;
 }
 
-header.fixed .cursol {
-  background: rgba(151, 151, 151, 0.514);
-}
+
 
 header .cursol {
   position: absolute;
@@ -324,7 +323,7 @@ main {
   padding: 15px 110px;
 }
 #gallery {
-  padding-top: 80px;
+  padding: 30px 0 30px;
   background:rgba(153, 153, 153, 0.048);
 }
 
@@ -347,4 +346,123 @@ main {
   width: 100%;
   margin-bottom: 5px;
 }
+
+
+/* question */
+#question {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+#question dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  gap: 20px 20px;
+}
+
+#question dl dt {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  
+}
+#question dl dt p {
+  text-align: center;
+  background: #88c3bd;
+  width: 50px;
+  line-height: 80px;
+  color:white;
+  font-size: 3rem;
+  box-sizing: border-box;
+  
+}
+
+#question dd {
+  width: calc(100% - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:5px
+}
+
+#question dl dd .qes {
+  font-weight: bold;
+}
+
+#question dl dd .ans {
+  font-size: 1.2rem;
+}
+
+/* new_page */
+#new_page {
+  padding: 30px 0;
+  background:rgba(153, 153, 153, 0.048);
+}
+
+#new_page .text p {
+  font-size: 1.3rem;
+}
+
+#new_page dl {
+  margin-top: 10px;
+}
+
+#new_page dt {
+  display: inline-block;
+  margin: 30px 0 5px;
+  background: #88c3bd;
+  color: white;
+  padding: 1px 15px;
+}
+
+#new_page dt p {
+  font-size: 1.4rem;
+}
+
+#new_page dd {
+  font-size: 1.3rem;
+}
+
+
+
+/* access */
+#access {
+  margin: 30px 0 0;
+}
+
+#access h2 ,p{
+  margin-bottom: 10px;
+}
+
+#access img {
+  width: 100%;
+}
+
+#access dl {
+  border-bottom: 2px solid #333;
+  margin: 10px 0 20px;
+  font-size: 1.5rem;
+}
+
+#access dt{
+  border-top: 2px solid #333;
+  border-bottom: 1px solid gray;
+  padding: 10px 0 10px 10px;
+  font-weight: bold;
+}
+
+#access dd{
+  padding: 10px 0 10px 10px;
+}
+
+#access iframe {
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+
 
