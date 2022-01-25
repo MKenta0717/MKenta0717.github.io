@@ -42,8 +42,10 @@ img {
 }
 
 .wapper {
+  border: 1px solid pink;
   width: 95%;
   margin: 0 auto;
+  
 }
 
 .readMore {
@@ -146,6 +148,7 @@ header .mask {
   left: 0;
   background: rgba(0, 0, 0, 0.863);
   z-index: 100;
+
 }
 
 header .mask nav {
@@ -220,6 +223,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 #hero #about p {
@@ -278,6 +282,7 @@ main {
   background-size: cover;
   text-align: center; 
   position: relative;
+ 
 }
 
 #contact::after {
@@ -318,3 +323,28 @@ main {
   background: #88c3bd;
   padding: 15px 110px;
 }
+#gallery {
+  padding-top: 80px;
+  background:rgba(153, 153, 153, 0.048);
+}
+
+
+#gallery h2 {
+  margin-bottom: 10px;
+}
+
+#gallery .pic {
+  width: 100%;
+  margin: 20px 0 20px;
+  text-align: center;
+}
+
+#gallery .pic > div+div {
+  margin-top: 20px;
+}
+
+#gallery .pic img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
