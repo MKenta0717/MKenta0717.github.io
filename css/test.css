@@ -98,7 +98,7 @@ header .cursol {
 
 header .cursol p{
   position: absolute;
-  bottom: -20px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
@@ -166,7 +166,7 @@ header .mask {
 
 }
 
-header .mask ul {
+header .mask .nav ul {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid rgb(180, 180, 180);
@@ -174,7 +174,7 @@ header .mask ul {
   
 }
 
-header .mask li  {
+header .mask .nav li  {
   position: relative;
   width: 50%;
   padding: 10px ;
@@ -183,29 +183,29 @@ header .mask li  {
 }
 
 
-header .mask li:nth-of-type(2n-1)  {
+header .mask .nav li:nth-of-type(2n-1)  {
   border-right: 1px solid rgb(180, 180, 180); 
 }
 
 
-header .mask li:last-of-type  {
+header .mask .nav li:last-of-type  {
   border-bottom: none
 }
 
 
-header .mask li p {
+header .mask .nav li p {
   display: flex;
   flex-direction: column;
   
   
 }
 
-header .mask li p .en {
+header .mask .nav li p .en {
   font-size: 1rem;
   font-weight: bold;
 }
 
-header .mask li::before{
+header .mask  .nav li::before{
   content: '＞＞';
   position: absolute;
   right: 20px;
@@ -245,14 +245,22 @@ header .mask li::before{
   border-radius: 28px;
 }
 
+header .mask .sns {
+  margin-top: 30px;
+}
 
+header .mask .sns ul{
+  display: flex;
+  justify-content: center;
 
+}
 
 
 header .mask.hidden {
   opacity: 0;
   transform: translateY(-200%);
 }
+
 
 /* main */
 /* hero */
