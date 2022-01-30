@@ -40,3 +40,4 @@
     setTimeout(function(){viewSlide(className, slideNo);}, 7000);
   }
 }
+

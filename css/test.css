@@ -16,7 +16,9 @@ p,
 ul,
 dl,
 dd,
-dt{
+dt,
+td,
+th{
   margin: 0;
   padding: 0;
 }
@@ -364,17 +366,17 @@ main {
 
 #explanation h1{
   font-size: 2.3rem;
-  /* border-bottom: 2px solid #88c3bd; */
+  border-bottom: 2px solid #88c3bd;
 }
 
 #explanation .text {
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   margin: 20px 0;
   line-height: 1.8;
 }
 
 #explanation .text p {
- font-size: 1rem;
+ font-size: 1.3rem;
 }
 
 #explanation .pic {
@@ -385,6 +387,47 @@ main {
   width: 95%;
 
 }
+
+/* menu */
+#menu{
+  margin-bottom: 30px;
+}
+#menu h1{
+  font-size: 2.3rem;
+  border-bottom: 2px solid #88c3bd;
+}
+
+#menu table{
+  width: 90%;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  border-collapse:collapse;
+}
+
+#menu td {
+  text-align: center;
+  border-top: 1px solid #000;
+  padding: 5px 0;
+  width: 40%;
+}
+
+#menu th {
+  padding: 5px 0;
+}
+
+
+#menu td:nth-child(1) {
+  width: 20%;
+}
+
+#menu th+th {
+  border-left: 1px solid #000;;
+}
+
+#menu td+td {
+  border-left: 1px solid #000;;
+}
+
 
 
 
@@ -581,6 +624,8 @@ main {
   height: 200px;
   margin-bottom: 10px;
 }
+
+
 
 
 @media (min-width:900px){
