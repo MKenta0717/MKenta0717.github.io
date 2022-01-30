@@ -43,8 +43,8 @@ img {
   vertical-align: bottom;
 }
 
-.wapper {
-  border: 1px solid pink;
+.wrapper {
+  
   width: 95%;
   margin: 0 auto;
   
@@ -319,20 +319,38 @@ main {
   z-index: 1;
 }
 
-#hero #about {
-  color: white;
-  z-index: 1;
-  writing-mode: vertical-rl;
+#concept {
+  text-align: center;
+  background-image:url(../img/blizzard.png) ;
+  padding: 30px;
+  position: relative;
 }
 
-#hero #about h1{
-  font-size: 2.8rem
+#concept .title{
+  position: absolute;
+  top: -1%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: 2.5rem;
+  padding: 0 15px;
+  background-image:url(../img/blizzard.png) ;
+  
+  
 }
 
-#hero #about p {
-  display: none;
+
+#concept .text{
+  margin: 0 auto;
+  padding: 60px 10px 20px;
+  max-width: 700px;
+  border:1px solid black;
 }
 
+#concept .text p{
+  margin-top: 30px;
+  line-height: 2;
+}
 /* menu */
 
 #menu {
