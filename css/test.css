@@ -289,7 +289,6 @@ main {
   width: 100%;
   height: 420px;
   position: relative;
-  margin-bottom: 20px;
 }
 
 #hero .slide {
@@ -322,17 +321,17 @@ main {
 #concept {
   text-align: center;
   background-image:url(../img/blizzard.png) ;
-  padding: 30px;
-  position: relative;
+  padding: 90px 10px 30px;
+  
 }
 
 #concept .title{
   position: absolute;
-  top: -1%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50% ,-140%);
   display: block;
   font-size: 2.5rem;
+  font-weight: bold;
   padding: 0 15px;
   background-image:url(../img/blizzard.png) ;
   
@@ -342,59 +341,48 @@ main {
 
 #concept .text{
   margin: 0 auto;
-  padding: 60px 10px 20px;
+  padding: 60px 10px 40px;
   max-width: 700px;
-  border:1px solid black;
+  border:1px solid #88c3bd;
+  position: relative;
 }
 
 #concept .text p{
   margin-top: 30px;
   line-height: 2;
 }
-/* menu */
+/* explanation  */
 
-#menu {
-  margin-bottom: 80px;
-}
-#menu h2 {
-  margin-bottom: 10px;
+#explanation {
+  margin-bottom: 50px;
 }
 
-#menu .pic {
-  margin: 20px 0 20px;
+#explanation .wrapper > div {
+  margin-top: 30px;
 }
 
-#menu .pic img {
-  width: 100%;
+#explanation h1{
+  font-size: 2.4rem;
+  border-bottom: 2px solid #88c3bd;
 }
 
-#menu dl {
-  font-size: 1.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+#explanation .text {
+  margin: 20px 0;
 }
 
-#menu dt {
-  width: 70%;
-  border-top: 1px solid black;
-  padding: 10px 0;
+#explanation .pic {
+  text-align: center;
 }
 
-#menu dt:last-of-type {
-  border-bottom: 1px solid black;
+#explanation .pic img{
+  width: 95%;
+
 }
 
-#menu dd {
-  width: 30%;
-  text-align: right;
-  border-top: 1px solid gray;
-  padding: 10px 0;
-}
 
-#menu dd:last-of-type {
-  border-bottom: 1px solid gray;
-}
+
+
+
 
 /* contact */
 
@@ -584,6 +572,13 @@ main {
 #access iframe {
   height: 200px;
   margin-bottom: 10px;
+}
+
+
+@media (min-width:900px){
+  #gallery .pic{
+    display: flex;
+  }
 }
 
 
