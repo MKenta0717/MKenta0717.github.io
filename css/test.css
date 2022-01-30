@@ -252,7 +252,10 @@ header .mask .sns {
 header .mask .sns ul{
   display: flex;
   justify-content: center;
+}
 
+header .mask .sns li{
+  cursor: pointer;
 }
 
 
