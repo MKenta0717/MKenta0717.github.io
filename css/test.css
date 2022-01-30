@@ -177,9 +177,22 @@ header .mask .nav ul {
 header .mask .nav li  {
   position: relative;
   width: 50%;
-  padding: 10px ;
   box-sizing: border-box;
+  
+  
   border-bottom: 1px solid rgb(180, 180, 180); 
+}
+
+header .mask .nav li a  {
+  display: inline-block;
+  padding: 10px ;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background .3s;
+}
+
+header .mask .nav li a:hover  {
+ background: #d2faf6;;
 }
 
 
@@ -279,20 +292,23 @@ main {
   margin-bottom: 20px;
 }
 
-#hero .pic {
+#hero .slide {
   position: absolute;
   z-index: -1;
   width: 100%;
   height: inherit;
 }
 
-#hero .pic img {
+#hero .slide img {
+  position: absolute;
   width: 100%;
+  opacity:0;
+	transition:all 1s ease-in-out;
   height: inherit;
   object-fit: cover;
 }
 
-#hero .pic::after {
+#hero .slide::after {
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.349);
@@ -305,11 +321,12 @@ main {
 
 #hero #about {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  writing-mode: vertical-rl;
+}
+
+#hero #about h1{
+  font-size: 2.8rem
 }
 
 #hero #about p {
