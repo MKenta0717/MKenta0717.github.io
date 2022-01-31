@@ -624,7 +624,22 @@ main {
   height: 200px;
   margin-bottom: 10px;
 }
+#item {
+  margin-bottom: 100px;
+}
 
+#item ul {
+  display: flex;
+  overflow-x: scroll;
+}
+
+#item li {
+ width: 100%;
+}
+
+#item li img{
+ height: 200px;
+}
 
 
 
