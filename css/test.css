@@ -645,6 +645,16 @@ main {
 
 .item-slider p {
   line-height: 1.2;
+  
+}
+
+.item-slider a{
+ display: block;
+ transition: opacity .3s;
+}
+
+.item-slider a:hover {
+  opacity: 0.7;
 }
 
 
