@@ -1,14 +1,12 @@
 html {
   font-size: 62.5%;
-  
 }
 
 body {
   margin: 0;
   padding: 0;
   color: #333;
-  font-family: 'PT Serif', serif;
-  
+  font-family: "PT Serif", serif;
 }
 
 h1,
@@ -20,7 +18,7 @@ dl,
 dd,
 dt,
 td,
-th{
+th {
   margin: 0;
   padding: 0;
 }
@@ -48,10 +46,8 @@ img {
 }
 
 .wrapper {
-  
   width: 95%;
   margin: 0 auto;
-  
 }
 
 .readMore {
@@ -84,95 +80,92 @@ img {
   border-radius: 28px;
 }
 
-.btn p{
+.btn p {
   font-size: 2rem;
   letter-spacing: 2px;
 }
 
 #splash {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: white;
-	z-index: 9999999;
-	text-align:center;
-	
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999999;
+  text-align: center;
 }
 
 #splash-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*========= 画面遷移のためのCSS ===============*/
 
 /*画面遷移アニメーション*/
-.splashbg{
-    display: none;
+.splashbg {
+  display: none;
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg{
-    display: block;
-    content: "";
-    position:fixed;
-	z-index: 999;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-	left: 0;
-    transform: scaleX(0);
-    background-color:#88c3bd;/*伸びる背景色の設定*/
-	animation-name:PageAnime;
-	animation-duration:1.2s;
-	animation-timing-function:ease-in-out;
-	animation-fill-mode:forwards;
+body.appear .splashbg {
+  display: block;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: #88c3bd; /*伸びる背景色の設定*/
+  animation-name: PageAnime;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-@keyframes PageAnime{
-	0% {
-		transform-origin:left;
-		transform:scaleX(0);
-	}
-	50% {
-		transform-origin:left;
-		transform:scaleX(1);
-	}
-	50.001% {
-		transform-origin:right;
-	}
-	100% {
-		transform-origin:right;
-		transform:scaleX(0);
-	}
+@keyframes PageAnime {
+  0% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  50% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  50.001% {
+    transform-origin: right;
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
 }
 
 /*画面遷移の後現れるコンテンツ設定*/
-#container{
-	opacity: 0;/*はじめは透過0に*/
+#container {
+  opacity: 0; /*はじめは透過0に*/
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear #container{
-	animation-name:PageAnimeAppear;
-	animation-duration:1s;
-	animation-delay: 0.8s;
-	animation-fill-mode:forwards;
-	opacity: 0;
+body.appear #container {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-@keyframes PageAnimeAppear{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-}
-
-
 
 #header {
   display: flex;
@@ -187,10 +180,6 @@ body.appear #container{
   z-index: 100;
 }
 
-
-
-
-
 header .cursol {
   position: absolute;
   width: 50px;
@@ -200,14 +189,14 @@ header .cursol {
   cursor: pointer;
 }
 
-header .cursol p{
+header .cursol p {
   position: absolute;
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
 }
-header .cursol.close p{
+header .cursol.close p {
   opacity: 0;
 }
 
@@ -263,58 +252,47 @@ header .mask {
   position: fixed;
   top: 100px;
   left: 0;
-  background:white;
+  background: white;
   z-index: 100;
-  
-  
-
 }
 
 header .mask .nav ul {
   display: flex;
   flex-wrap: wrap;
   border: 1px solid rgb(180, 180, 180);
-
-  
 }
 
-header .mask .nav li  {
+header .mask .nav li {
   position: relative;
   width: 50%;
   box-sizing: border-box;
-  
-  
-  border-bottom: 1px solid rgb(180, 180, 180); 
+
+  border-bottom: 1px solid rgb(180, 180, 180);
 }
 
-header .mask .nav li a  {
+header .mask .nav li a {
   display: inline-block;
-  padding: 10px ;
+  padding: 10px;
   width: 100%;
   box-sizing: border-box;
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
-header .mask .nav li a:hover  {
- background: #d2faf6;;
+header .mask .nav li a:hover {
+  background: #d2faf6;
 }
 
-
-header .mask .nav li:nth-of-type(2n-1)  {
-  border-right: 1px solid rgb(180, 180, 180); 
+header .mask .nav li:nth-of-type(2n-1) {
+  border-right: 1px solid rgb(180, 180, 180);
 }
 
-
-header .mask .nav li:last-of-type  {
-  border-bottom: none
+header .mask .nav li:last-of-type {
+  border-bottom: none;
 }
-
 
 header .mask .nav li p {
   display: flex;
   flex-direction: column;
-  
-  
 }
 
 header .mask .nav li p .en {
@@ -322,18 +300,16 @@ header .mask .nav li p .en {
   font-weight: bold;
 }
 
-header .mask  .nav li::before{
-  content: '＞＞';
+header .mask .nav li::before {
+  content: "＞＞";
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   color: #88c3bd;
-  
-
 }
 
-.mask .contact{
+.mask .contact {
   text-align: center;
   margin-top: 50px;
 }
@@ -351,38 +327,32 @@ header .mask  .nav li::before{
   font-size: 1.8rem;
 }
 
- 
-
 header .mask .sns {
   margin-top: 30px;
 }
 
-header .mask .sns ul{
+header .mask .sns ul {
   display: flex;
   justify-content: center;
 }
 
-header .mask .sns li{
+header .mask .sns li {
   cursor: pointer;
 }
-
 
 header .mask.hidden {
   opacity: 0;
   transform: translateY(-200%);
 }
 
-
 /* main */
 /* hero */
-
-
 
 #hero {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #hero .slide {
@@ -396,8 +366,8 @@ header .mask.hidden {
   position: absolute;
   width: 100%;
   height: 100vh;
-  opacity:0;
-	transition:all 1s ease-in-out;
+  opacity: 0;
+  transition: all 1s ease-in-out;
   height: inherit;
   object-fit: cover;
 }
@@ -416,116 +386,113 @@ header .mask.hidden {
 /*====== 9-1-1 縦線が動いてスクロールを促す =======*/
 
 /*スクロールダウン全体の場所*/
-.scrolldown{
+.scrolldown {
   /*描画位置※位置は適宜調整してください*/
-position:absolute;
-left:50%;
-bottom:100px;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
   /*全体の高さ*/
-height:50px;
-
+  height: 50px;
 }
 
 /*Scrollテキストの描写*/
-.scrolldown span{
+.scrolldown span {
   /*描画位置*/
-position: absolute;
-left:-15px;
-top: -15px;
+  position: absolute;
+  left: -15px;
+  top: -15px;
   /*テキストの形状*/
-color: #eee;
-font-size: 0.7rem;
-letter-spacing: 0.05em;
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
 }
 
 /* 線の描写 */
-.scrolldown::after{
-content: "";
+.scrolldown::after {
+  content: "";
   /*描画位置*/
-position: absolute;
-top: 0;
+  position: absolute;
+  top: 0;
   /*線の形状*/
-width: 1px;
-height: 30px;
-background-color: #eee;
+  width: 1px;
+  height: 30px;
+  background-color: #eee;
   /*線の動き1.4秒かけて動く。永遠にループ*/
-animation: pathmove 1.4s ease-in-out infinite;
-opacity:0;
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
 }
 
 /*高さ・位置・透過が変化して線が上から下に動く*/
-@keyframes pathmove{
-0%{
-  height:0;
-  top:0;
-  opacity: 0;
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
 }
-30%{
-  height:30px;
-  opacity: 1;
-}
-100%{
-  height:0;
-  top:50px;
-  opacity: 0;
-}
-}
-
-
 
 #concept {
   text-align: center;
-  background-image:url(../img/blizzard.png) ;
+  background-image: url(../img/blizzard.png);
   padding: 90px 10px 30px;
-  
 }
 
-#concept .title{
+#concept .title {
   position: absolute;
   left: 50%;
-  transform: translate(-50% ,-140%);
+  transform: translate(-50%, -140%);
   display: block;
   font-size: 2.5rem;
   font-weight: bold;
   padding: 0 15px;
-  background-image:url(../img/blizzard.png) ;
-  
-  
+  background-image: url(../img/blizzard.png);
 }
 
-
-#concept .text{
+#concept .text {
   margin: 0 auto;
   padding: 60px 10px 40px;
   max-width: 700px;
-  border:1px solid #88c3bd;
+  border: 1px solid #88c3bd;
   position: relative;
 }
 
-#concept .text p{
+#concept .text p {
   margin-top: 30px;
   line-height: 2;
   letter-spacing: 2.5px;
 }
 
-.fadeUp{
-  animation-name:fadeUpAnime;
-  animation-duration:2s;
-  animation-fill-mode:forwards;
-  opacity:0;
-  }
-  
-  @keyframes fadeUpAnime{
-    from {
-      opacity: 0;
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
     transform: translateY(100px);
-    }
-  
-    to {
-      opacity: 1;
-    transform: translateY(0);
-    }
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeUpTrigger{
+  opacity: 0;
+}
 /* explanation  */
 
 #explanation {
@@ -537,7 +504,7 @@ opacity:0;
   margin-top: 30px;
 }
 
-#explanation h1{
+#explanation h1 {
   font-size: 2.3rem;
   border-bottom: 2px solid #88c3bd;
 }
@@ -549,34 +516,32 @@ opacity:0;
 }
 
 #explanation .text p {
- font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 #explanation .pic {
   text-align: center;
 }
 
-#explanation .pic img{
+#explanation .pic img {
   width: 95%;
-
 }
 
 /* menu */
-#menu{
+#menu {
   background: white;
   padding-top: 30px;
- 
 }
-#menu h1{
+#menu h1 {
   font-size: 2.3rem;
   border-bottom: 2px solid #88c3bd;
 }
 
-#menu table{
+#menu table {
   width: 90%;
   margin: 20px auto;
   font-size: 1.5rem;
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 #menu td {
@@ -590,35 +555,25 @@ opacity:0;
   padding: 5px 0;
 }
 
-
-
-
 #menu td:nth-child(1) {
   width: 20%;
 }
 
-#menu th+th {
-  border-left: 1px solid #000;;
+#menu th + th {
+  border-left: 1px solid #000;
 }
 
-#menu td+td {
-  border-left: 1px solid #000;;
+#menu td + td {
+  border-left: 1px solid #000;
 }
-
-
-
-
-
-
 
 /* contact */
 
-#contact{
+#contact {
   background-image: url(../img/footer_bg.jpg);
   background-size: cover;
-  text-align: center; 
+  text-align: center;
   position: relative;
- 
 }
 
 #contact::after {
@@ -640,7 +595,10 @@ opacity:0;
   z-index: 2;
 }
 
-#contact table th, .time, .address, .btn{
+#contact table th,
+.time,
+.address,
+.btn {
   font-size: 1.5rem;
 }
 
@@ -651,15 +609,12 @@ opacity:0;
 
 #contact table .address {
   padding: 20px 0;
-  
 }
-
 
 #gallery {
   padding: 30px 0 30px;
-  background:white;
+  background: white;
 }
-
 
 #gallery h2 {
   margin-bottom: 10px;
@@ -671,7 +626,7 @@ opacity:0;
   text-align: center;
 }
 
-#gallery .pic > div+div {
+#gallery .pic > div + div {
   margin-top: 20px;
 }
 
@@ -681,13 +636,10 @@ opacity:0;
   border-radius: 50px;
 }
 
-
 /* question */
 #question {
- 
   padding: 30px 0;
-  background:white;
-
+  background: white;
 }
 
 #question dl {
@@ -702,19 +654,15 @@ opacity:0;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
-  
 }
 #question dl dt p {
   text-align: center;
   background: #88c3bd;
   width: 50px;
   line-height: 80px;
-  color:white;
+  color: white;
   font-size: 3rem;
   box-sizing: border-box;
-  
 }
 
 #question dd {
@@ -722,7 +670,7 @@ opacity:0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:5px
+  gap: 5px;
 }
 
 #question dl dd .qes {
@@ -736,8 +684,7 @@ opacity:0;
 /* new_page */
 #new_page {
   padding: 30px 0;
-  background:white;
-
+  background: white;
 }
 
 #new_page .text p {
@@ -764,16 +711,14 @@ opacity:0;
   font-size: 1.3rem;
 }
 
-
-
 /* access */
 #access {
- padding: 30px 0;
-  background:white;
-
+  padding: 30px 0;
+  background: white;
 }
 
-#access h2 ,#access p{
+#access h2,
+#access p {
   margin-bottom: 10px;
 }
 
@@ -787,14 +732,14 @@ opacity:0;
   font-size: 1.5rem;
 }
 
-#access dt{
+#access dt {
   border-top: 2px solid #333;
   border-bottom: 1px solid gray;
   padding: 10px 0 10px 10px;
   font-weight: bold;
 }
 
-#access dd{
+#access dd {
   padding: 10px 0 10px 10px;
 }
 
@@ -804,113 +749,101 @@ opacity:0;
 }
 
 #item {
-  padding:50px 0 50px;
+  padding: 50px 0 50px;
   text-align: center;
-  background:white;
-
+  background: white;
 }
 
-
-.item-slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width:94%;
-  margin:0 auto;
-  
+.item-slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
 }
 
 .item-slider p {
   line-height: 1.2;
-  
 }
 
-.item-slider a{
- display: block;
- transition: opacity .3s;
+.item-slider a {
+  display: block;
+  transition: opacity 0.3s;
 }
 
 .item-slider a:hover {
   opacity: 0.7;
 }
 
-
 .item-slider img {
-   width:100%;/*スライダー内の画像を横幅100%に*/
-   height:auto;
-   padding-bottom: 10px;
+  width: 100%; /*スライダー内の画像を横幅100%に*/
+  height: auto;
+  padding-bottom: 10px;
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 
 .item-slider .slick-slide {
-   margin:0 10px;
+  margin: 0 10px;
 }
 
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
-   position: absolute;/*絶対配置にする*/
-   top: 42%;
-   cursor: pointer;/*マウスカーソルを指マークに*/
-   outline: none;/*クリックをしたら出てくる枠線を消す*/
-   border-top: 2px solid #666;/*矢印の色*/
-   border-right: 2px solid #666;/*矢印の色*/
-   height: 10px;
-   width: 10px;
+  position: absolute; /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer; /*マウスカーソルを指マークに*/
+  outline: none; /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666; /*矢印の色*/
+  border-right: 2px solid #666; /*矢印の色*/
+  height: 10px;
+  width: 10px;
 }
 
-.slick-prev {/*戻る矢印の位置と形状*/
-   left: -1.5%;
-   transform: rotate(-135deg);
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
 }
 
-.slick-next {/*次へ矢印の位置と形状*/
-   right: -1.5%;
-   transform: rotate(45deg);
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
 }
 
 /*ドットナビゲーションの設定*/
 
 .slick-dots {
-text-align:center;
-margin:20px 0 0 0;
-padding: 0;
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 0;
 }
 
 .slick-dots li {
-   display:inline-block;
- margin:0 5px;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .slick-dots button {
   all: unset;
-   color: transparent;
-   width: 8px;
-   height: 8px;
-   border-radius: 50%;
-   background: gray;
-  
+  color: transparent;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: gray;
 }
 
-.slick-dots .slick-active button{
-  
-   background:#333;/*ドットボタンの現在地表示の色*/
-  
+.slick-dots .slick-active button {
+  background: #333; /*ドットボタンの現在地表示の色*/
 }
 
-
-
-
-
-@media (min-width:900px){
-  #gallery .pic{
+@media (min-width: 900px) {
+  #gallery .pic {
     display: flex;
   }
 
-  #gallery .pic > div+div {
+  #gallery .pic > div + div {
     margin-top: 0px;
   }
 }
-
-
-
