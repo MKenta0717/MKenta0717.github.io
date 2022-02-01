@@ -1,18 +1,6 @@
 
 
 {
-  const header = document.querySelector('#header');
-
-  window.addEventListener('scroll',()=>{
-    console.log(window.pageYOffset)
-    console.log(window.pageYOffset)
-    if(window.pageYOffset > 0){
-      header.classList.add('fixed');
-    }else{
-      header.classList.remove('fixed');
-    }
-    
-  });
 
   const cursol = document.querySelector('.cursol');
   const mask = document.querySelector('.mask');
@@ -25,6 +13,7 @@
   window.addEventListener('load', function () {
     viewSlide('.slide img');
   });
+  
   function viewSlide(className, slideNo = -1)
   {
     let imgArray = document.querySelectorAll(className);
@@ -78,3 +67,12 @@ $(window).on('load',function(){
   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
   
   });
+
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();//スクロール値を定義
+//header-imgの背景
+$('.slide').css({
+  transform: 'scale('+(100 + scroll/10)/100+')',//スクロール値を代入してscale1から拡大.scroll/10の値を小さくすると拡大値が大きくなる
+  top: -(scroll/50)  + "%",//スクロール値を代入してtopの位置をマイナスにずらす
+    });
+});
