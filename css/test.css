@@ -420,7 +420,7 @@ header .mask.hidden {
   /*描画位置※位置は適宜調整してください*/
 position:absolute;
 left:50%;
-bottom:30px;
+bottom:100px;
   /*全体の高さ*/
 height:50px;
 
