@@ -124,7 +124,7 @@ body.appear .splashbg{
     top: 0;
 	left: 0;
     transform: scaleX(0);
-    background-color:#c4faf5;/*伸びる背景色の設定*/
+    background-color:#88c3bd;/*伸びる背景色の設定*/
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
