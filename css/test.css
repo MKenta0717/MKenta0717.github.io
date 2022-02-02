@@ -473,7 +473,7 @@ header .mask.hidden {
 
 .fadeUp {
   animation-name: fadeUpAnime;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -517,14 +517,29 @@ header .mask.hidden {
 
 #explanation .text p {
   font-size: 1.3rem;
+  padding-bottom: 30px;
 }
 
 #explanation .pic {
+  
   text-align: center;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#explanation .pic::after {
+  position: absolute;
+	content: '';
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: inset 0 0 10px 15px #FFF;
 }
 
 #explanation .pic img {
-  width: 95%;
+  width: 100%;
 }
 
 /* menu */
