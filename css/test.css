@@ -560,13 +560,61 @@ header .mask.hidden {
   z-index: 1;
 }
 
-#menu span {
+#menu .en {
  color: #88c3bd49;
  position: absolute; 
  font-family: 'Courgette', cursive;;
 font-size: 4.2rem;
 top:100px;
+}
 
+#menu .first,.etc{
+  text-align: center;
+}
+
+#menu .first {
+  margin-bottom: 20px;
+}
+
+
+
+#menu .first span,.etc span{
+  display: inline-block;
+  width: 134px;
+  margin: 40px auto 20px;
+  padding: 2px 0;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #88c3bd;
+
+  
+}
+
+#menu .first span p,.etc span p {
+  margin: 0 auto;
+  padding: 5px 0 ;
+  width: 130px;
+  background: #88c3bd;;
+  color: white;
+  letter-spacing: 2px;
+}
+
+#menu .btn-menu a {
+display: inline-block;
+ font-size: 1.2rem;
+ outline: 1px solid rgb(34, 34, 34);
+border-radius: 20px;
+padding: 0px 10px;
+margin-top: 20px;
+transition: background .5s, color .3s;
+box-sizing: border-box;
+color: rgb(34, 34, 34);
+}
+
+#menu .btn-menu a:hover{
+  color: white;
+  background: #88c3bd;
+  outline: none;
 }
 
 
