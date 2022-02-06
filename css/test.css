@@ -152,6 +152,10 @@ img {
   transform: translate(-50%, -50%);
 }
 
+#splash-logo img {
+  width: 15vmin;
+}
+
 /*========= 画面遷移のためのCSS ===============*/
 
 /*画面遷移アニメーション*/
@@ -997,6 +1001,10 @@ header .mask.hidden {
 
   #concept p {
     font-size: 1.7rem;
+  }
+
+  #explanation{
+    padding-top: 60px;
   }
 
   #explanation .wrapper{
