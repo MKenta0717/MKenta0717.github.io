@@ -49,6 +49,8 @@ img {
 .wrapper {
   width: 95%;
   margin: 0 auto;
+  max-width: 620px;
+
 }
 
 .readMore {
@@ -551,6 +553,8 @@ header .mask.hidden {
   position: relative;
 }
 
+
+
 .title {
   text-align: center;
   font-family: 'Italianno', cursive;
@@ -588,6 +592,8 @@ top:100px;
 
 #menu .content img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #menu .content .text {
@@ -601,6 +607,7 @@ top:100px;
 #menu .content .text p {
  font-size: 1.3rem;
  text-align: left;
+ padding-bottom: 20px;
 }
 
 
@@ -646,35 +653,7 @@ color: rgb(34, 34, 34);
 }
 
 
-#menu table {
-  width: 90%;
-  margin: 20px auto;
-  font-size: 1.5rem;
-  border-collapse: collapse;
-}
 
-#menu td {
-  text-align: center;
-  border-top: 1px solid #000;
-  padding: 5px 0;
-  width: 40%;
-}
-
-#menu th {
-  padding: 5px 0;
-}
-
-#menu td:nth-child(1) {
-  width: 20%;
-}
-
-#menu th + th {
-  border-left: 1px solid #000;
-}
-
-#menu td + td {
-  border-left: 1px solid #000;
-}
 
 /* contact */
 
@@ -823,7 +802,7 @@ color: rgb(34, 34, 34);
 }
 
 #new_page dl {
-  margin-top: 10px;
+  margin-top: 10px auto 0;
 }
 
 #new_page dt {
@@ -1011,12 +990,8 @@ color: rgb(34, 34, 34);
   background: #333; /*ドットボタンの現在地表示の色*/
 }
 
-@media (min-width: 900px) {
-  #gallery .pic {
-    display: flex;
-  }
-
-  #gallery .pic > div + div {
-    margin-top: 0px;
+@media (min-width: 800px) {
+  #menu .container {
+    
   }
 }
