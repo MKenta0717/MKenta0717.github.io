@@ -1,0 +1,591 @@
+/* 共通 */
+/* body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+} */
+
+.container {
+  width: 100%;
+  padding: 0 70px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.title h1 {
+  font-family: 'Rhodium Libre';
+  /* font-family: 'Rhodium Libre', serif; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  color: #EBE3E3;
+  line-height: 45px;
+}
+
+
+
+.readmore a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 314px;
+  height: 55px;
+  box-sizing: border-box;
+
+
+}
+
+.readmore a::after {
+  position: absolute;
+  right: 16px;
+  content: ">";
+  font-size: 30px;
+
+}
+
+.intro_const_common {
+  margin-top: 45px;
+}
+
+.intro_const_common .content {
+  width: 100%;
+  height: 317px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #FFFFFF;
+}
+
+.intro_const_common .content h2 {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+
+}
+
+.intro_const_common .content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0em;
+
+}
+
+.intro_const_common .content .readmore a {
+  border: 1px solid #FFFFFF;
+}
+
+
+.subtitle h2 {
+  width: 100%;
+  height: 95px;
+  margin: 0 0 47px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #0F586F 55.82%, rgba(20, 96, 124, 0.828545) 63.4%, rgba(23, 147, 217, 0.08) 100.04%);
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 32px;
+
+}
+
+
+
+/* ヘッダー */
+.header {
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+
+.header .logo_area {
+  padding: 0 0 10px 10px;
+}
+
+.header .logo_area .logo {
+  width: 198px;
+}
+
+.header .hub_menu {
+  width: 90px;
+  height: 100%;
+  background: #0f586f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 auto;
+  cursor: pointer; 
+  position: relative;
+  z-index: 1;
+  gap: 8px;
+}
+
+.header .hub_menu:hover{
+  opacity: 0.8;
+}
+
+.hub_menu .icon-border {
+  width: 25px;
+  height: 2px;
+  background: #FFFFFF;
+  transition: all .6s;
+}
+
+.hub_menu.is_open .line1{
+  transform: translateY(10px) rotate(-135deg)
+}
+.hub_menu.is_open .line2{
+  transform: translateX(50%);
+  opacity: 0;
+}
+.hub_menu.is_open .line3{
+  transform: translateY(-10px) rotate(135deg)
+}
+
+.header .header_nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 85%;
+  max-width: 400px;
+  height: 600px;
+  background: #0F586F;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: all .5s;
+}
+
+.header .header_nav.is_open{
+  display: flex;
+  transform: translateX(0);
+  transition: all .5s;
+}
+
+.header .header_nav .close {
+  height: calc(100% / 7);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 0 35px;
+}
+
+.header .header_nav .close img {
+ width: 50px;
+ height: 50px;
+}
+
+.header .header_nav .close img:hover{
+  background: gray;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.header .header_nav .menu {
+  height: calc((100% / 7) * 6);
+  display: flex;
+  flex-direction: column;
+}
+
+.header .header_nav .menu li {
+  height: calc(100% / 6)
+}
+
+.header .header_nav .menu li+li {
+  border-top: solid 3px #FFFFFF;
+}
+
+.header .header_nav .menu a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #FFFFFF;
+  padding: 0 0 0 45px;
+  font-size: 20px;
+ 
+
+}
+
+/* ヒーロー */
+
+.hero {
+  width: 100%;
+  height: 466px;
+  background: url(../img/hero/hero_mobile.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero .text {
+  position: absolute;
+  top: 192px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #ffffff;
+
+}
+
+.hero .text h1 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.hero .text p {
+  font-size: 12px;
+}
+
+.bottom_top_image img {
+  width: 100%;
+}
+
+/* 会社 */
+.company {
+  background-image: url(../img/company_info/com_info_bg.jpg);
+  background-size: cover;
+  padding: 50px 0 40px 0;
+}
+
+.company .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company .text h1 {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.company .text h1::after {
+  position: absolute;
+  bottom: -2px;
+  display: block;
+  content: "";
+  width: 72px;
+  height: 2px;
+  background: #1793D9;
+}
+
+.company .text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  align-self: start;
+}
+
+.company .text p+p {
+  margin-top: 10px;
+}
+
+.company .pic {
+  margin: 44px 0 0 0;
+}
+
+.company .pic img {
+  width: 100%;
+}
+
+.company .feature {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.company .feature img {
+  width: 100%;
+}
+
+.company .readmore {
+  display: flex;
+  justify-content: center;
+}
+
+.company .readmore a {
+  border: solid 1px #4D4949;
+}
+
+.company .readmore a::after {
+  color: #4D4949;
+
+}
+
+/* リフォーム内容 */
+
+.remodeling {
+  margin: 45px 0 0 0;
+}
+
+.remodeling_box .explanation {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #333030;
+  width: 100%;
+
+
+  color: #FFFFFF;
+}
+
+.remodeling .text {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 550px;
+
+}
+
+.remodeling_box .explanation h3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+}
+
+.remodeling_box .explanation h3::before {
+  position: absolute;
+  left: -80px;
+  top: -35px;
+  content: "";
+  width: 80px;
+  height: 80px;
+
+
+
+}
+
+.remodeling_box .picture {
+  width: 100%;
+  height: 364px;
+
+}
+
+.remodeling_box .explanation p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  align-self: flex-start;
+
+
+}
+
+.remodeling_box .explanation p+p {
+  margin-top: 10px;
+}
+
+
+.remodeling_box .explanation .painting::before {
+  background: url(../img/remodeling/painting.png) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .explanation .closs::before {
+  background: url(../img/remodeling/closs.png) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .explanation .roof::before {
+  background: url(../img/remodeling/roof.png) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .explanation .balcony::before {
+  background: url(../img/remodeling/balcony.png) no-repeat center center;
+  background-size: cover;
+}
+
+
+.remodeling_box .picture.painting_pic {
+  background: url(../img/remodeling/painting_image.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .picture.closs_pic {
+  background: url(../img/remodeling/closs_image.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .picture.roof_pic {
+  background: url(../img/remodeling/roof_image.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.remodeling_box .picture.balcony_pic {
+  background: url(../img/remodeling/balcony_image.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+/* 職人紹介 */
+#introduction .content {
+  background: url(../img/introduction.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* 施工事例 */
+
+#construction .content {
+  background: url(../img/construction/construction.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+
+/* 対応エリア */
+.area {
+  display: flex;
+  flex-direction: column;
+  margin: 45px 0 55px;
+
+}
+
+.map img {
+  width: 100%;
+}
+
+.area .text {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.area .text p {
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+
+
+}
+
+/* フッター */
+footer .company_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background: #0F586F;
+  color: white;
+  font-family: Noto Serif JP;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  padding: 20px 0 40px;
+  box-sizing: border-box;
+}
+
+footer .company_footer img {
+  width: 198px;
+}
+
+
+
+footer .company_footer li+li {
+  margin-top: 5px;
+}
+
+
+footer .estimate {
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+}
+
+/* お見積もり */
+footer .estimate a {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  font-family: Noto Serif JP;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  background: rgba(255, 255, 255, 0.8);
+ 
+}
+
+footer .estimate.not_active {
+  position: absolute;
+  bottom: auto;
+}
+
+footer .estimate a::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/estimate/mail.png) no-repeat center center;
+  background-size: contain;
+}
+
+footer small {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  background: #4D4949;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+footer small p {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+
+}
